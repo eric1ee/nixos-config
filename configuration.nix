@@ -21,7 +21,7 @@
   networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
-  networking.proxy.default = "http://192.168.8.115:7890/";
+  # networking.proxy.default = "http://192.168.8.115:7890/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
@@ -186,7 +186,7 @@
 
 
   # stable software microsoft-edge
-  vim protonplus flclash git keepassxc wget sing-box  fcitx5-mellow-themes vlc ffmpeg-full papirus-icon-theme unrar blender libreoffice-fresh wechat-uos vscode
+  vim protonplus flclash git keepassxc wget sing-box  fcitx5-mellow-themes vlc ffmpeg-full papirus-icon-theme unrar blender libreoffice-fresh vscode gopeed
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
