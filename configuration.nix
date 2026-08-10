@@ -168,7 +168,7 @@
     fish = {
     enable = true;
     shellInit = ''
-      set -g fish_greeting "欢迎您回来，康康大人！！！"
+      set -g fish_greeting "欢迎您回来，康康大人！！！!"
       '';
     };
 };
