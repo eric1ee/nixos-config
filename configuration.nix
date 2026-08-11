@@ -187,7 +187,7 @@
   unstable.flclash
 
   # stable software microsoft-edge
-  vim protonplus git keepassxc wget sing-box  fcitx5-mellow-themes vlc ffmpeg-full papirus-icon-theme unrar blender libreoffice-fresh vscode gopeed
+  vim protonplus git keepassxc wget sing-box  fcitx5-mellow-themes vlc ffmpeg-full papirus-icon-theme unrar blender libreoffice-fresh vscode gopeed nil
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
