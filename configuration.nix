@@ -184,10 +184,10 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   # unstable software
-
+  unstable.flclash
 
   # stable software microsoft-edge
-  vim protonplus flclash git keepassxc wget sing-box  fcitx5-mellow-themes vlc ffmpeg-full papirus-icon-theme unrar blender libreoffice-fresh vscode gopeed
+  vim protonplus git keepassxc wget sing-box  fcitx5-mellow-themes vlc ffmpeg-full papirus-icon-theme unrar blender libreoffice-fresh vscode gopeed
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
