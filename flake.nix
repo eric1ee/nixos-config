@@ -7,7 +7,7 @@
   };
 
   outputs =
-    { nixpkgs, nixpkgs-unstable, nix-flatpak, ... }:
+    { nixpkgs, nixpkgs-unstable, ... }:
     {
       nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
         modules = [
