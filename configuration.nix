@@ -68,7 +68,6 @@
   };
 
 
-
   fonts = {
     # 1. 安装系统中其他的常用字体
     packages = with pkgs; [
