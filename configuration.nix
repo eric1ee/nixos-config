@@ -187,7 +187,7 @@
   unstable.flclash
 
   # stable software microsoft-edge
-  vim protonplus git keepassxc wget sing-box  fcitx5-mellow-themes vlc ffmpeg-full papirus-icon-theme unrar blender libreoffice-fresh vscode gopeed nil ghostty
+  vim protonplus git keepassxc wget sing-box  fcitx5-mellow-themes vlc ffmpeg-full papirus-icon-theme unrar blender libreoffice-fresh vscode gopeed nil ghostty fastfetch
 xwayland-satellite  wf-recorder zenity# 使用niri需要
   ];
 
