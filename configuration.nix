@@ -103,12 +103,7 @@
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.plasma-login-manager.enable = true;
-  # services.desktopManager.plasma6.enable = true;
-
-  # 使用niri
-  programs.niri.enable = true;
-  programs.dms-shell.enable = true;
-
+  services.desktopManager.plasma6.enable = true;
 
   services.sunshine = {
     enable = true;
@@ -193,7 +188,6 @@
 
   # stable software microsoft-edge
   vim protonplus git keepassxc wget sing-box  fcitx5-mellow-themes vlc ffmpeg-full papirus-icon-theme unrar blender libreoffice-fresh vscode gopeed nil ghostty
-yazi
 xwayland-satellite  wf-recorder zenity# 使用niri需要
   ];
 
