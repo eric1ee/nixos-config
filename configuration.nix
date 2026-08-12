@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 {
   imports =
@@ -165,6 +165,12 @@
     steam = {
       enable = true;
       protontricks.enable = true;
+      package = pkgs.steam.override {
+        extraEnv = {
+          LD_AUDIT = "${
+            inputs.sls-steam.packages.${pkgs.stdenv.hostPlatform.system}.sls-steam}/library-inject.so:${inputs.sls-steam.packages.${pkgs.stdenv.hostPlatform.system}.sls-steam}/SLSsteam.so";
+      };
+        };
     };
     fish = {
     enable = true;
