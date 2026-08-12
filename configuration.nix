@@ -29,7 +29,7 @@
 
   services.avahi = {
     enable = true;
-    nssmdns = true;  # 让系统能解析 .local 域名
+    nssmdns4 = true;  # 让系统能解析 .local 域名
     publish = {
       enable = true;
       addresses = true;
@@ -103,7 +103,12 @@
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.plasma-login-manager.enable = true;
-  services.desktopManager.plasma6.enable = true;
+  # services.desktopManager.plasma6.enable = true;
+
+  # 使用niri
+  programs.niri.enable = true;
+  programs.dms-shell.enable = true;
+
 
   services.sunshine = {
     enable = true;
@@ -187,8 +192,11 @@
   unstable.flclash
 
   # stable software microsoft-edge
-  vim protonplus git keepassxc wget sing-box  fcitx5-mellow-themes vlc ffmpeg-full papirus-icon-theme unrar blender libreoffice-fresh vscode gopeed nil
+  vim protonplus git keepassxc wget sing-box  fcitx5-mellow-themes vlc ffmpeg-full papirus-icon-theme unrar blender libreoffice-fresh vscode gopeed nil ghostty
+yazi
+xwayland-satellite  wf-recorder zenity# 使用niri需要
   ];
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
