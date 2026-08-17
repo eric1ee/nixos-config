@@ -184,7 +184,8 @@
   # 开启flake特性
   nix.settings.experimental-features = [ "nix-command" "flakes"];
   # 设置中国源 中科大排第一
-  nix.settings.substituters = lib.mkForce [ "https://mirrors.ustc.edu.cn/nix-channels/store" "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" "https://mirrors.nju.edu.cn/nix-channels/store" "https://cache.nixos.org"];
+  # "https://mirrors.nju.edu.cn/nix-channels/store"
+  nix.settings.substituters = lib.mkForce [ "https://mirrors.ustc.edu.cn/nix-channels/store" "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" "https://cache.nixos.org"];
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
