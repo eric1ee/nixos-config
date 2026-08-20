@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./ftp-scanner.nix
     ];
 
   # Bootloader.
@@ -194,8 +195,8 @@
 
   # stable software microsoft-edge
   vim protonplus git keepassxc wget sing-box  fcitx5-mellow-themes vlc ffmpeg-full papirus-icon-theme unrar blender libreoffice-fresh vscode gopeed nil ghostty fastfetch
-xwayland-satellite  wf-recorder zenity# 使用niri需要
-  ];
+  xwayland-satellite  wf-recorder zenity# 使用niri需要
+  kdePackages.skanpage  ];
 
 
   # Some programs need SUID wrappers, can be configured further or are
