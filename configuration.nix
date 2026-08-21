@@ -159,6 +159,8 @@
     ];
   };
 
+  programs.nix-ld.enable = true;
+
   # Install firefox.
   programs.firefox.enable = true;
   programs = {
