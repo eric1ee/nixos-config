@@ -160,7 +160,21 @@
   };
 
   programs.nix-ld.enable = true;
-
+  programs.fuse.enable = true;
+  programs.appimage = {
+    enable = true;
+    package = pkgs.appimage-run.override {
+      extraPkgs = pkgs: with pkgs; [
+        zstd
+        xcb-util-cursor
+        libglvnd
+        alsa-lib
+        libxkbcommon
+        wayland
+        qt6.qtbase
+        ];
+    };
+  };
   # Install firefox.
   programs.firefox.enable = true;
   programs = {
@@ -192,11 +206,12 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    (pkgs.callPackage ./pkgs/accala.nix {})
   # unstable software
   unstable.flclash unstable.gopeed
 
   # stable software microsoft-edge
-  vim protonplus git keepassxc wget fcitx5-mellow-themes vlc ffmpeg-full papirus-icon-theme unrar blender libreoffice-fresh vscode nil ghostty fastfetch
+  vim protonplus git keepassxc wget fcitx5-mellow-themes vlc ffmpeg-full papirus-icon-theme unrar blender libreoffice-fresh vscode nil ghostty fastfetch appimage-run
   xwayland-satellite  wf-recorder zenity# 使用niri需要
   kdePackages.skanpage  ];
 
