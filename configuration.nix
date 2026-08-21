@@ -191,10 +191,10 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   # unstable software
-  unstable.flclash
+  unstable.flclash unstable.gopeed
 
   # stable software microsoft-edge
-  vim protonplus git keepassxc wget sing-box  fcitx5-mellow-themes vlc ffmpeg-full papirus-icon-theme unrar blender libreoffice-fresh vscode gopeed nil ghostty fastfetch
+  vim protonplus git keepassxc wget sing-box  fcitx5-mellow-themes vlc ffmpeg-full papirus-icon-theme unrar blender libreoffice-fresh vscode nil ghostty fastfetch
   xwayland-satellite  wf-recorder zenity# 使用niri需要
   kdePackages.skanpage  ];
 
