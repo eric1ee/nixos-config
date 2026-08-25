@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./ftp.nix
+      ./applications.nix
     ];
 
   # Bootloader.
@@ -205,14 +206,7 @@
   nix.settings.substituters = lib.mkForce [ "https://mirrors.ustc.edu.cn/nix-channels/store" "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" "https://cache.nixos.org"];
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-  # unstable software
-  unstable.flclash unstable.gopeed
 
-  # stable software microsoft-edge
-  vim protonplus git keepassxc wget fcitx5-mellow-themes vlc ffmpeg-full papirus-icon-theme unrar blender libreoffice-fresh vscode nil fastfetch appimage-run
-  xwayland-satellite  wf-recorder zenity# 使用niri需要
-  kdePackages.skanpage  ];
 
 
   # Some programs need SUID wrappers, can be configured further or are
