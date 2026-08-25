@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./ftp-scanner.nix
+      ./ftp.nix
     ];
 
   # Bootloader.
@@ -206,12 +206,11 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    (pkgs.callPackage ./pkgs/accala.nix {})
   # unstable software
   unstable.flclash unstable.gopeed
 
   # stable software microsoft-edge
-  vim protonplus git keepassxc wget fcitx5-mellow-themes vlc ffmpeg-full papirus-icon-theme unrar blender libreoffice-fresh vscode nil ghostty fastfetch appimage-run
+  vim protonplus git keepassxc wget fcitx5-mellow-themes vlc ffmpeg-full papirus-icon-theme unrar blender libreoffice-fresh vscode nil fastfetch appimage-run
   xwayland-satellite  wf-recorder zenity# 使用niri需要
   kdePackages.skanpage  ];
 
