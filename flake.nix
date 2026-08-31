@@ -1,5 +1,5 @@
 {
-  description = "NixOS configuration with two or more channels";
+  description = "My Configuration";
 
   inputs = {
     nixpkgs.url = "git+https://mirrors.tuna.tsinghua.edu.cn/git/nixpkgs.git?ref=nixos-26.05&shallow=1";
@@ -10,9 +10,7 @@
       };
   };
 
-  outputs =
-    { nixpkgs, nixpkgs-unstable, sls-steam, ... }@inputs:
-    {
+  outputs = { nixpkgs, nixpkgs-unstable, sls-steam, ... }@inputs: {
       nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
@@ -23,7 +21,7 @@
                    inherit (final) config;
                    inherit (final.stdenv.hostPlatform) system;
                 };
-                # kdePackages = final.unstable.kdePackages; #kde最新版本
+                kdePackages = final.unstable.kdePackages; #kde最新版本
               })
             ];
           }

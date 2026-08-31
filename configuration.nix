@@ -106,11 +106,6 @@
   services.displayManager.plasma-login-manager.enable = true;
   services.desktopManager.plasma6.enable = true;
 
-  services.sunshine = {
-    enable = true;
-    openFirewall = true;
-    autoStart = true;
-  };
   services.tailscale.enable = true;
 
   # Configure keymap in X11
@@ -145,7 +140,6 @@
   };
   services.flatpak.enable = true;
 
-
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -177,7 +171,7 @@
     };
   };
   # Install firefox.
-  programs.firefox.enable = true;
+  # programs.firefox.enable = true;
   programs = {
     steam = {
       enable = true;
@@ -206,7 +200,9 @@
   nix.settings.substituters = lib.mkForce [ "https://mirrors.ustc.edu.cn/nix-channels/store" "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" "https://cache.nixos.org"];
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-
+  nix.settings.cores = 2; # 限制为 2 个并行编译任务，内存占用会大幅下降
+  # 或者更激进一点
+  nix.settings.max-jobs = 1; # 仅允许 1 个编译任务
 
 
   # Some programs need SUID wrappers, can be configured further or are
