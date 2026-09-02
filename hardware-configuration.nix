@@ -29,6 +29,13 @@
       fsType = "ext4";
     };
 
+  # 自动挂载 sda1 (199G)
+  fileSystems."/mnt/work" = {
+    device = "/dev/disk/by-uuid/09A035E1D4F3666C";
+    fsType = "ntfs3";
+    options = [ "noatime" "uid=1000" "gid=100" ];
+  };
+
   swapDevices = [ ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
