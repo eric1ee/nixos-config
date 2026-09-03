@@ -6,10 +6,15 @@
     # unstable software
     unstable.flclash unstable.gopeed
 
-    # stable software microsoft-edge
-    vim protonplus git keepassxc wget fcitx5-mellow-themes vlc ffmpeg-full  unrar libreoffice-fresh vscode nil fastfetch appimage-run microsoft-edge
+    # stable software
+    vim protonplus git keepassxc wget  vlc ffmpeg-full  unrar nil fastfetch appimage-run
     xwayland-satellite  wf-recorder zenity# 使用niri需要
-    kdePackages.skanpage  gimp ];
+    kdePackages.skanpage gimp
+    (tesseract.override { enableLanguages = [ "chi_sim" "eng" ]; })
+    (kdePackages.spectacle.override {
+      tesseractLanguages = [ "all" ];  # 或 null
+      })
+    ];
 
   services.sunshine = {
     enable = true;
