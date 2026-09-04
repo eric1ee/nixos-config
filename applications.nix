@@ -4,7 +4,7 @@
 {
   environment.systemPackages = with pkgs; [
     # unstable software
-    unstable.flclash unstable.gopeed
+    flclash unstable.gopeed
 
     # stable software
     vim protonplus git keepassxc wget  vlc ffmpeg-full  unrar nil fastfetch appimage-run
